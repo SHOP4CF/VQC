@@ -1,0 +1,10 @@
+../imgs/template/01.jpg 2478 1292 33 26
+../imgs/template/01.jpg 1744 811 35 36
+../imgs/template/01.jpg 1633 353 29 32
+../imgs/template/05.jpg 1338 1239 15 137
+../imgs/template/05.jpg 1525 904 96 15
+../imgs/template/05.jpg 1821 887 17 129
+../imgs/template/05.jpg 573 676 209 20
+../imgs/template/04.jpg 1807 827 53 24
+../imgs/template/04.jpg 417 515 26 40
+../imgs/template/04.jpg 1233 316 52 24

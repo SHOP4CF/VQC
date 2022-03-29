@@ -1,0 +1,71 @@
+#All configuration about interface, methods, utils configuration
+interface:
+  use_db: False 
+  entity_type: Process
+  factory_id: Bosch
+  entity_id: vqc1
+  component_id: vqc1 # ! Here you need to provide entity id of our component.
+  fiware_host: localhost #! If you have some connections problems changing it to localhost may help
+  to_inspect_attr: pcb_path #! this always should be a path to the pcb to be inspected
+  template_attr: value #! This should be path to the template if not using db otherwise template_id to fetch path from the database
+  method: template_matching # difference, template_matching, k_means
+  histogram_eq: True # can be turned off but generally gives much better results with this
+  using_cropped: False
+  path_for_outcomes: tests/notExistingDir 
+  save_all: True   
+methods:
+  difference:
+      er_shape: 0 # RECT - 0, CROSS - 1, ELLIPSE - 2, shape of the kernel that will be convolved during Morphological Transformations
+      er_size: 3 # size of the kernel that will be convolved during Morphological Transformations
+      kernel_size: 21 #size of the kernel used during binaryzation has to be odd number
+      closing: True
+      closing_size: 3
+      opening: True
+      opening_size: 5
+      simple_method_thresh: 50
+      method: "simple" # simple/complex
+  template_matching:
+      matching_method: 3 # can vary from 1-6, method used while performing template matching
+      template_size: 150 # size of the window that will be convolved
+      min_difference: 0.99 # minimal score (similarity) when current window will be considered as defected
+
+utils:
+  aligner:
+      max_features: 500 #maximal amount of features (keypoints) that extractor will find (may find less than this value)
+      good_match_percent: 0.3 #how many of those found we want to keep, some keypoints may be poor and we should reject them.
+  roi_cropper:
+      x1_i: 0
+      x2_i: -1
+      y1_i: 0
+      y2_i: -1
+      #indices which edge from the right, left, top, bottom should be considered as the edge of the region
+      #if background is not smooth it may be necessery to tune either those hyperparameters or different
+      method: "edge" # edge - using edge detection, color - using color segmentation
+      canny_thresh_low: 100
+      canny_thresh_top: 180
+  #    Only for method 0! what threshold means here - Pixels above threshold top are considered
+  #    as edges pixels below threshold low are discarded and pixels between those values are considered as edges iff they're connected to
+  #    pixels that are above upper threshold it should be selected carefully as to big thresh_top may lead to not detecting those
+  #    edges that we want and vice versa to low may detect edges that should be rejected
+      thresh_border: 28000
+      #again this value should be selected according to the new data this threshold basically means
+      #how many white pixels should be there to conider some row as an edge.
+      low_color: "#004000"
+      high_color: "#ffffff"
+  #Box generator uses difference method so it has almost the same configurations
+  box_generator:
+      er_shape: 0 # RECT - 0, CROSS - 1, ELLIPSE - 2, shape of the kernel that will be convolved during Morphological Transformations
+      er_size: 4 # size of the kernel that will be convolved during Morphological Transformations
+      closing: True
+      opening: True
+      method: "simple" # simple/complex
+      shift: 5
+      low_area_thresh: 200
+      path: boxes.txt
+
+      
+    
+    
+
+
+

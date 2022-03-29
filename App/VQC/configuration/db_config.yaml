@@ -1,0 +1,8 @@
+#Short comment about host.docker.internal, ofc localhost when we run something on docker is localhost w.r.t. it's internal network we use
+# this to connect to host. So this resolves to the internal IP address used by the host. This is for development purpose and will not work 
+#in a production environment outside of Docker Desktop for Windows/Mac.
+#! If you test locally you shoud put localhost inside host_name, if you test using docker you need to put host.docker.internal!!
+host_name: localhost
+port: 27017
+db: SHOP4CF
+collection_name: templates
