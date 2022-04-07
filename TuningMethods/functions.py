@@ -47,7 +47,7 @@ def aligner(
 
         # Match features
         matcher = cv.DescriptorMatcher_create(cv.DESCRIPTOR_MATCHER_BRUTEFORCE_HAMMING)
-        matches = matcher.match(descriptors1, descriptors2, None)
+        matches = list(matcher.match(descriptors1, descriptors2, None))
 
         # Sort matches by score
         matches.sort(key=lambda x: x.distance, reverse=False)
