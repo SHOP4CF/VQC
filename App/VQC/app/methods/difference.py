@@ -217,12 +217,12 @@ class Difference(Method):
 
             if len(boxes) > 0:
                 to_be_inspected = cv.cvtColor(to_be_inspected, cv.COLOR_GRAY2BGR) if len(
-                    to_be_inspected.shape) == 1 else to_be_inspected
+                    to_be_inspected.shape) == 2 else to_be_inspected
                 for box in boxes:
                     x, y, w, h = box
                     cv.rectangle(
                         to_be_inspected, (x, y), (x + w, y +
-                                                  h), tuple(self.bbox_color), 3
+                                                  h), tuple([0,0,255]), 3#tuple(self.bbox_color), 3
                     )
                 return (
                     "Defected",

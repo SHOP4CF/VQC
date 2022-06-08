@@ -131,9 +131,9 @@ class Analysis:
 
         if self.config["interface"]["histogram_eq"]:
             to_inspect_img = cv.equalizeHist(to_inspect_img)
-            template = cv.equalizeHist(template_img)
+            template_img = cv.equalizeHist(template_img)
 
-        if template.shape != to_inspect_img.shape:
+        if template_img.shape != to_inspect_img.shape:
             msg = """App.Analysis: Shapes of images does not match, Check if you have Aligner in your pipeline!"""
             debug_help.log_fiware_resp_exception(
                 logger,
@@ -145,7 +145,7 @@ class Analysis:
             )
 
         method = self.config["interface"]["method"]
-        self.methods[method].template = template
+        self.methods[method].template = template_img
 
         result, result_img = self.methods[method].apply(
             to_inspect_img, template_path)
