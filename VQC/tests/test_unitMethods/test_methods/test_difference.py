@@ -1,7 +1,7 @@
 import pytest
 import cv2 as cv
 import numpy as np
-import VQC.app.methods as methods
+import app.methods as methods
 from os.path import join
 
 """

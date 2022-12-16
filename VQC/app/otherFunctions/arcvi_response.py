@@ -3,7 +3,7 @@ import json
 import logging
 import time
 import os
-import VQC.app.otherFunctions.debug_help as dh
+import app.otherFunctions.debug_help as dh
 
 # ensure that the responder config is available
 if dh.fiware_responder is None:

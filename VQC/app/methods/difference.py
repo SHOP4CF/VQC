@@ -2,7 +2,7 @@ import numpy as np
 import cv2 as cv
 import logging
 
-from VQC.app.methods import Method
+from app.methods import Method
 
 logger = logging.getLogger("app")
 

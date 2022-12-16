@@ -1,6 +1,6 @@
 import pytest
 
-from VQC.app.otherFunctions import readConfig
+from app.otherFunctions import readConfig
 from os.path import join
 
 """

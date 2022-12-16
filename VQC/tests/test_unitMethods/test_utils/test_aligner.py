@@ -1,6 +1,6 @@
 import pytest
 import cv2 as cv
-import VQC.app.utils as utils
+import app.utils as utils
 from os.path import join
 
 """

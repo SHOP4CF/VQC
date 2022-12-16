@@ -1,7 +1,7 @@
 from flask import Blueprint, g, request
 import json
-from VQC.app import Analysis
-from VQC.app.otherFunctions import enums, debug_help, arcvi_response
+from app import Analysis
+from app.otherFunctions import enums, debug_help, arcvi_response
 import logging
 
 inspect = Blueprint("inspect", __name__, url_prefix="/inspect")

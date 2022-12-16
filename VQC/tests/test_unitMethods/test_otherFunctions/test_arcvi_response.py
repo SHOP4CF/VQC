@@ -1,6 +1,6 @@
 import json
 
-import VQC.app.otherFunctions as otherFunctions
+import app.otherFunctions as otherFunctions
 
 """
 arcvi_response:

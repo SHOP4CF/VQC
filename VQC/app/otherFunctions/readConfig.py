@@ -2,7 +2,7 @@ import confuse
 import yaml
 import logging
 
-from VQC.app.otherFunctions import enums, debug_help
+from app.otherFunctions import enums, debug_help
 
 
 """

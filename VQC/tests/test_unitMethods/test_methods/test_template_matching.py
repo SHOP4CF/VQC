@@ -1,7 +1,6 @@
 import pytest
 
-import VQC.app.methods as methods
-from VQC.app.utils import box_generator
+import app.methods as methods
 from os.path import join
 import cv2 as cv
 
@@ -29,6 +28,7 @@ def get_tested():
 
 
 def test_template_matching(get_template, get_tested):
+    from app.utils import box_generator
     alg = methods.TemplateMatcher(
         template=get_template, box_generator=box_generator.BoxGenerator())
     alg.template_size = 10

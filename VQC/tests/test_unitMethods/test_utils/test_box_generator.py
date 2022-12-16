@@ -1,7 +1,7 @@
 import pytest
 import os
 
-import VQC.app.utils as utils
+import app.utils as utils
 
 """
 box_generator:

@@ -2,9 +2,9 @@ import typing
 
 import cv2 as cv
 import os
-from VQC.app.utils import Util
-from VQC.app.otherFunctions import debug_help, enums
-from VQC.app.methods.difference import Difference
+from app.utils import Util
+from app.otherFunctions import debug_help, enums
+from app.methods.difference import Difference
 import logging
 import numpy as np
 

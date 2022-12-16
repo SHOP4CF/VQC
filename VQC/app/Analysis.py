@@ -3,10 +3,10 @@ import os
 import cv2 as cv
 
 # from app import db only this class has acess to the db
-from VQC.app.otherFunctions import enums, readConfig, debug_help
+from app.otherFunctions import enums, readConfig, debug_help
 
-import VQC.app.methods as methods
-import VQC.app.utils as utils
+import app.methods as methods
+import app.utils as utils
 
 
 logger = logging.getLogger("app")

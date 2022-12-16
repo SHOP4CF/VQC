@@ -1,6 +1,6 @@
 import numpy as np
 import cv2 as cv
-from VQC.app.methods import Method
+from app.methods import Method
 import logging
 
 logger = logging.getLogger("app")

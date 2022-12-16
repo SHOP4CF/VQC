@@ -1,6 +1,6 @@
 import pytest
 import json
-from VQC.app import Analysis
+from app import Analysis
 from os.path import join, isdir
 
 """

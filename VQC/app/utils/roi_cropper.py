@@ -1,7 +1,7 @@
 import numpy as np
 import cv2 as cv
 import logging
-from VQC.app.utils import Util
+from app.utils import Util
 
 logger = logging.getLogger("app")
 

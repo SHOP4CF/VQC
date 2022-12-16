@@ -1,9 +1,8 @@
-import logging
-import cv2 as cv
 import numpy as np
-
-from VQC.app.utils import Util
-from VQC.app.otherFunctions import debug_help, enums
+import cv2 as cv
+from app.utils import Util
+import logging
+from app.otherFunctions import debug_help, enums
 
 logger = logging.getLogger("app")
 

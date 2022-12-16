@@ -1,5 +1,5 @@
-import VQC.app.otherFunctions as otherFunctions
-import VQC.app.otherFunctions.debug_help as dh
+import app.otherFunctions as otherFunctions
+import app.otherFunctions.debug_help as dh
 import pytest
 import datetime
 """

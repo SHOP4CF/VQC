@@ -1,7 +1,7 @@
 import logging
 
-import VQC.app.otherFunctions.fiware_response as fr
-import VQC.app.otherFunctions.debug_help as dh
+import app.otherFunctions.fiware_response as fr
+import app.otherFunctions.debug_help as dh
 import datetime
 
 fiware_statuses = {0: "Waiting", 1: "Working", 2: "Error"}

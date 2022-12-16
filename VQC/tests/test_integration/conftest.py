@@ -5,7 +5,7 @@ import pytest
 from flask.testing import FlaskClient
 from os.path import join
 
-from VQC.app import create_app
+from app import create_app
 
 
 @pytest.fixture

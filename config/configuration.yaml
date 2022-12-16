@@ -27,7 +27,7 @@ methods:
       simple_method_thresh: 50
       method: "simple" # simple/complex
       plot_boxes: True # Create bounding box
-      area_threshold: 800
+      area_threshold: 80
       bbox_color: [0,0,255]
   template_matching:
       matching_method: 3 # can vary from 1-6, method used while performing template matching

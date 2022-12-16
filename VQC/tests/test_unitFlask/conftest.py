@@ -3,7 +3,7 @@ File containing all fixtures it is very usefull to define flask app and client
 here, all tests defined in that folder have access to it
 """
 import pytest
-from VQC.app import create_app
+from app import create_app
 from os.path import join
 
 

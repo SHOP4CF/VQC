@@ -2,8 +2,7 @@ import os
 from flask import Flask
 import yaml
 
-from VQC.app.otherFunctions import create_logger, readConfig
-from VQC.app import Analysis, config, inspect
+from app.otherFunctions import create_logger, readConfig
 
 
 """In here we create all loggers that can be used inside app"""
@@ -29,7 +28,7 @@ def create_app(test_config=os.path.join("config", "configuration.yaml")):
     """Initializing our main component."""
     vqc_config = readConfig.read_config(
         test_config)
-    
+    from app import Analysis
 
     Analysis.analysis = Analysis.Analysis(vqc_config)
 
@@ -53,8 +52,12 @@ def create_app(test_config=os.path.join("config", "configuration.yaml")):
     out inspection and second is
     for setting configs
     """
+    from app import inspect
 
     app.register_blueprint(inspect.inspect)
+
+    from app import config
+
     app.register_blueprint(config.config)
 
     return app

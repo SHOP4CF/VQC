@@ -3,8 +3,8 @@ import os
 
 from flask import Blueprint, request
 
-from VQC.app import Analysis
-from VQC.app.otherFunctions import enums, debug_help
+from app import Analysis
+from app.otherFunctions import enums, debug_help
 
 config = Blueprint("config", __name__, url_prefix="/config")
 

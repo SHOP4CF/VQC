@@ -1,7 +1,7 @@
 import requests
 import json
 import logging
-from VQC.app.otherFunctions import debug_help, readConfig
+from app.otherFunctions import debug_help, readConfig
 
 """Some predefined constants that must be known in advance"""
 
