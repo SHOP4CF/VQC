@@ -1,0 +1,14 @@
+version: "3.4"
+services:  #here we list all containers that we would like to run
+  vqc:
+    build:
+      context: .
+    image: vqc
+    ports:
+      - "5000:5000"
+    volumes:
+      - ../config:/app/config
+      - ../imgs:/imgs
+      - ./logs:/app/logs
+    # network_mode: host
+

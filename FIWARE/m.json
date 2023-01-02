@@ -1,0 +1,10 @@
+{
+    "pcb_path":{
+        "value":"/imgs/control/02_01.png",
+        "type":"Property"
+    },
+    "value":{
+        "type": "Property",
+        "value": "/imgs/template/02.png"
+    }
+}
